@@ -87,6 +87,7 @@ a.btn:focus {
 
 body {
   padding-top: 3.5625rem;
+  overflow: scroll;
 }
 
 .docs-sidebar {
@@ -157,7 +158,8 @@ body {
   order: 1;
 }
 
-.docs-navigation, .blog-navigation {
+.docs-navigation,
+.blog-navigation {
   margin-top: 2rem;
   margin-bottom: 0;
   padding-top: 2rem;
@@ -172,7 +174,9 @@ body {
 }
 
 @include media-breakpoint-up(lg) {
-  .docs-navigation, .blog-navigation {
+
+  .docs-navigation,
+  .blog-navigation {
     margin-bottom: -1rem;
 
     a {
