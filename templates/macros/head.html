@@ -6,6 +6,9 @@
 
 {% macro stylesheet() %}
 <link rel="stylesheet" href="{{ get_url(path="main.css") | safe }}">
+<link rel="stylesheet" href="{{ get_url(path='fonts.css') }}">
+<link rel="stylesheet" href="{{ get_url(path='fontawesome/css/fontawesome.css') }}">
+<link rel="stylesheet" href="{{ get_url(path="presentation.css") | safe }}">
 {% endmacro %}
 
 
