@@ -31,15 +31,8 @@
 </head>
 {% block body %}{% set page_class="home" %}{% endblock body %}
 <body class="{{ page_class }}">
-  <!--{% block header %}
-    {{ macros_header::header(current_section="/") }}
-  {% endblock header %}-->
 
   {% block content %}{% endblock content %}
-
-  <!--{% block footer %}
-    {{ macros_footer::footer() }}
-  {% endblock footer %}-->
 
   {{ macros_js::javascript() }}  
 </body>
