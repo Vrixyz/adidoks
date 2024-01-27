@@ -28,6 +28,12 @@
   <main>
     <div class="column left">
       <img src="{{ get_url(path='images/portrait.jpg') }}" class="portrait" alt="Portrait" />
+    </div>
+    <div class="column right">
+      <h1>{{ config.extra.greeting | default(value="Hello") }}<br />{{ config.extra.subtitle |
+        default(value="Folks") }}</h1>
+      <h2>{{ config.extra.author.name | default(value="Hallo") }}
+      </h2>
       {% if config.extra.links %}
       <div class="links" >
         {% for link in config.extra.links %}
@@ -41,25 +47,17 @@
         {% endfor %}
       </div>
       {% endif %}
-    </div>
-    <div class="column right">
-      <h1>{{ config.extra.greeting | default(value="Hello") }}<br />{{ config.extra.subtitle |
-        default(value="Folks") }}</h1>
-      <h2>{{ config.extra.author.name | default(value="Hallo") }}
-      </h2>
       <p>{{ section.content | safe }}</p>
-
-      
-      <div class="links">
-        <div class="article-card" onclick="location.href='/articles/first'">
-          {% set page = get_page(path="articles/first.md", metadata_only=true) %}
-          <h1 class="article-card-title">{{ page.title }}</h1>
-          <p>{{ page.extra.tagline }}</p>
-        </div>
-      </div>
-      
     </div>
   </main>
+
+  <div class="articles">
+    <div class="article-card" onclick="location.href='/articles/first'">
+      {% set page = get_page(path="articles/first/index.md", metadata_only=true) %}
+      <h1 class="article-card-title">{{ page.title }}</h1>
+      <p class="tagline">{{ page.extra.lead }}</p>
+    </div>
+  </div>
 </div>
 
 <section class="section section-sm container-fluid">
