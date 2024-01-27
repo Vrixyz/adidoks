@@ -52,8 +52,8 @@
   </main>
 
   <div class="articles">
-    <div class="article-card" onclick="location.href='/articles/first'">
-      {% set page = get_page(path="articles/first/index.md", metadata_only=true) %}
+    {% set page = get_page(path="articles/persona_ugc/index.md", metadata_only=true) %}
+    <div class="article-card" onclick="location.href='{{ page.permalink }}'">
       <h1 class="article-card-title">{{ page.title }}</h1>
       <p class="tagline">{{ page.extra.lead }}</p>
     </div>
