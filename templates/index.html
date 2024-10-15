@@ -58,7 +58,14 @@
       <p class="tagline">{{ page.extra.lead }}</p>
       <p class="article-card-seemore">Lire plus</p>
     </div>
+    {% set page = get_page(path="articles/incentivized_ads/index.md", metadata_only=true) %}
+    <div class="article-card" onclick="location.href='{{ page.permalink }}'">
+      <h1 class="article-card-title">{{ page.title }}</h1>
+      <p class="tagline">{{ page.extra.lead }}</p>
+      <p class="article-card-seemore">Lire plus</p>
   </div>
+  </div>
+    
 </div>
 
 <section class="section section-sm container-fluid">
